@@ -9,10 +9,15 @@ class TrainTracker():
 
     def get_stations_for_route(self, route):
         # i'd like to move this to a data store that refreshes every x days
-        response = requests.get(route_url + f'?{route}=true')
-        data = json.loads(response.text)
-        return data
+        if(route in self.get_routes().keys()):
+            response = requests.get(route_url + f'?{route}=true')
+            data = json.loads(response.text)
+            return data
+        else:
+            pass
 
+    def get_routes(self):
+        return{"red":"Red", "p": "Purple", "y": "Yellow", "blue": "Blue", "pnk": "Pink", "o": "Orange", "brn": "Brown", "g": "Green"}
         
 
 # class Route(self):

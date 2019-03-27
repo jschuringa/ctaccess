@@ -4,3 +4,7 @@ config\.py
 venv/
 
 \.vscode/
+
+tracker/__pycache__/
+
+tracker/tests/__pycache__/
