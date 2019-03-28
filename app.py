@@ -6,4 +6,4 @@ app = Flask(__name__)
 def home():
     track = train.TrainTracker("key")
     routes = track.get_routes()
-    return render_template('home.html', routes=routes)
+    return render_template('trainroutes.html', routes=routes)
