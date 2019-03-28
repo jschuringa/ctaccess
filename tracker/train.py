@@ -2,6 +2,7 @@ import requests
 import json
 
 route_url = 'https://data.cityofchicago.org/resource/8mj8-j3c4.json'
+arrivals_url = 'http://lapi.transitchicago.com/api/1.0/ttarrivals.aspx'
 
 class TrainTracker():
     def __init__(self, key):

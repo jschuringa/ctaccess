@@ -1,2 +1,7 @@
-<h1><a>Montrose Brown Line</a></h1>
-<h1><a>Montrose Bus</a></h1>
+<ul>
+    {% for key, value in routes.items() %}
+        <li>
+            <a href="{{key}}">{{value}}</a>
+        </li>
+    {% endfor %}
+</ul>
